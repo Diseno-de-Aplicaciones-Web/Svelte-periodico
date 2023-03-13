@@ -18,7 +18,6 @@
 
     import Noticias from "./conponents/Noticias/Noticias.svelte";
     import Formulario from "./conponents/Formulario/Formulario.svelte";
-    //import { novas } from "./datos.js"
     let novas = []
 
 </script>
