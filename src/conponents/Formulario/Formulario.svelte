@@ -11,7 +11,7 @@
     <input type="url" bind:value={valorURLimaxe}>
 </label>
 
-<button>Guardar</button>
+<button on:click={manexadorGuardar}>Guardar</button>
 
 <Noticias
     titulo={novaNova.titulo}
@@ -24,10 +24,25 @@
 
     import Noticias from "../Noticias/Noticias.svelte";
 
+    export let listaNovas
+
     let valorTitulo = ""
     let valorContido = ""
     let valorURLimaxe = ""
     let novaNova
+
+    function manexadorGuardar() {
+        const novaLista = [...listaNovas]
+        novaLista.push(novaNova)
+        listaNovas = novaLista
+    }
+
+    /*
+    function manexadorGuardar() {
+        listaNovas.push(novaNova)
+        listaNovas = listaNovas
+    }
+    */
 
     $: { 
         novaNova =     {
