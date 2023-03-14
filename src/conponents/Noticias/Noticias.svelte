@@ -10,3 +10,7 @@
     export let fonteImaxe = "https://picsum.photos/200/300"
     export let textoAlternativoImaxe = "...";
 </script>
+
+<style>
+    
+</style>

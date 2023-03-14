@@ -1,24 +1,30 @@
-<label>
-    Título:
-    <input type="text" bind:value={valorTitulo}>
-</label>
-<label>
-    Contido:
-    <textarea bind:value={valorContido}/>
-</label>
-<label>
-    URL imaxe:
-    <input type="url" bind:value={valorURLimaxe}>
-</label>
+<main>
 
-<button on:click={manexadorGuardar}>Guardar</button>
+    <label>
+        Título:
+        <input type="text" bind:value={valorTitulo}>
+    </label>
+    <label>
+        Contido:
+        <textarea bind:value={valorContido}/>
+    </label>
+    <label>
+        URL imaxe:
+        <input type="url" bind:value={valorURLimaxe}>
+    </label>
 
-<Noticias
-    titulo={novaNova.titulo}
-    contido={novaNova.contido}
-    fonteImaxe={novaNova.fonteDaImaxe}
-    textoAlternativoImaxe={novaNova.textoAlternativo}
-/>
+    <button on:click={manexadorGuardar}>Guardar</button>
+
+</main>
+
+<aside>
+    <Noticias
+        titulo={novaNova.titulo}
+        contido={novaNova.contido}
+        fonteImaxe={novaNova.fonteDaImaxe}
+        textoAlternativoImaxe={novaNova.textoAlternativo}
+    />
+</aside>
 
 <script>
 
@@ -32,17 +38,9 @@
     let novaNova
 
     function manexadorGuardar() {
-        const novaLista = [...listaNovas]
-        novaLista.push(novaNova)
-        listaNovas = novaLista
-    }
-
-    /*
-    function manexadorGuardar() {
         listaNovas.push(novaNova)
         listaNovas = listaNovas
     }
-    */
 
     $: { 
         novaNova =     {
@@ -56,5 +54,27 @@
 </script>
 
 <style>
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    label {
+        display: flex;
+        margin: 1rem;
+        min-width: 50%;
+    }
+
+    label > * {
+        margin: 0rem 1rem;
+    }
+
+    label input, label textarea {
+        flex-grow: 1;
+    }
+
+    textarea {
+        vertical-align: text-top;
+    }
 </style>
