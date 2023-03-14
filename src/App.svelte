@@ -17,14 +17,16 @@
 
     <h1>Novas</h1>
 
-    {#each novas as estaNova}
+    <section>
+        {#each novas as estaNova}
         <Noticias
             titulo={estaNova.titulo}
             contido={estaNova.contido}
             fonteImaxe={estaNova.fonteDaImaxe}
             textoAlternativoImaxe={estaNova.textoAlternativo}
         />
-    {/each}
+        {/each}
+    </section>
 
 {/if}
 
@@ -40,7 +42,63 @@
     import Noticias from "./conponents/Noticias/Noticias.svelte";
     import Formulario from "./conponents/Formulario/Formulario.svelte";
 
-    let novas = []
+    let novas = [
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados. Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/picsum/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/1/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/2/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/3/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/4/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/5/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/6/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/5/200/200"
+        },
+        {
+            titulo: "Estudiantes reclama máis horas lectivas.",
+            contido: "Os sisdicatos de estudiantes reclaman máis horas lectivas: `Máis horas lectivas implican máis exames, e cantos máis exames máis diversión` indicou o representante dos amotinados.",
+            textoAlternativo: "Unha foto calquera", //ToDo
+            fonteDaImaxe: "https://picsum.photos/seed/6/200/200"
+        },
+    ]
+
     let vistaActual = "noticias"
 
     function manejadorNavNoticias() {
@@ -52,3 +110,11 @@
     }
 
 </script>
+
+<style>
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+</style>

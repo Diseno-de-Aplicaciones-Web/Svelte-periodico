@@ -1,15 +1,15 @@
 <main>
 
     <label>
-        Título:
+        <span>Título:</span>
         <input type="text" bind:value={valorTitulo}>
     </label>
     <label>
-        Contido:
+        <span>Contido:</span>
         <textarea bind:value={valorContido}/>
     </label>
     <label>
-        URL imaxe:
+        <span>URL imaxe:</span>
         <input type="url" bind:value={valorURLimaxe}>
     </label>
 
@@ -54,6 +54,7 @@
 </script>
 
 <style>
+
     main {
         display: flex;
         flex-direction: column;
@@ -77,4 +78,5 @@
     textarea {
         vertical-align: text-top;
     }
+    
 </style>
